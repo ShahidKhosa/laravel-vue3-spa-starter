@@ -9,7 +9,7 @@
                         <img :src="getImageUrl(post)" class="img-fluid"/>
                     </div>
                     <div class="col p-4 d-flex flex-column position-static">
-                        <strong v-for="category in post.categories" class="d-inline-block mb-2 text-primary">
+                        <strong v-for="category in post.categories" :key="category.id" class="d-inline-block mb-2 text-primary">
                             {{ category.name }}
                         </strong>
                         <h3 class="mb-0">{{ post.title }}</h3>
